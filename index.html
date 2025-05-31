@@ -31,7 +31,8 @@
                     I am an undergraduate researcher at <a href="https://cvit.iiit.ac.in/">CVIT (Center for Visual
                       Information Technology)</a>, IIIT-Hyderabad, where I am jointly advised by <a
                       href="https://ravika.github.io/">Ravi Kiran S</a> and <a
-                      href="https://cds.iisc.ac.in/faculty/venky/">Venkatesh Babu Radhakrishnan</a> from <a href="https://val.cds.iisc.ac.in/">VAL (Vision and AI Lab), IISc Bangalore</a>. 
+                      href="https://cds.iisc.ac.in/faculty/venky/">Venkatesh Babu Radhakrishnan</a> from <a
+                      href="https://val.cds.iisc.ac.in/">VAL (Vision and AI Lab), IISc Bangalore</a>.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:agrvaibhav19@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -68,16 +69,12 @@
           <table
             style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
-
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle">
-                  <p>
-                    * denotes equal contribution.
-                  </p>
-                </td>
-              </tr>
-
-              <tr onmouseout="compass_control_stop()" onmouseover="compass_control_start()" bgcolor="#ffffd0">
+              <p>
+                * denotes equal contribution.
+              </p>
+            </tbody>
+            <tbody>
+              <tr onmouseout="compass_control_stop()" onmouseover="compass_control_start()" bgcolor="#cefad0">
                 <td style="padding:16px;width:20%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='compass_control_image'><video width=100% height=100% muted autoplay loop>
@@ -99,8 +96,8 @@
                   </script>
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://szymanowiczs.github.io/bolt3d">
-                    <span class="papertitle">Compass Control: Multi-Object Orientation Control for Text-to-Image Generation</span>
+                  <a href="https://rishubhpar.github.io/compasscontrol/">
+                    <span class="papertitle">Compass Control: Multi-Object Orientation Control for Text-to-Image Generation
                   </a>
                   <br>
                   <strong>Vaibhav Agrawal*</strong>,
@@ -110,13 +107,114 @@
                   <br>
                   <em>CVPR</em>, 2025
                   <br>
+                  <a href="https://rishubhpar.github.io/compasscontrol/">project page</a> 
+                  /
                   <a href="https://arxiv.org/abs/2504.06752">arXiv</a>
                   <p></p>
                   <p>
-                    A method for multi-object orientation control in T2I diffusion models. We show that an encoder can map a 3D orientation for an object to a special token, and the attention maps of these tokens can be constrained spatially to enable disentangled multi-object control.  
+                    A method for multi-object orientation control in T2I generation. We learn an encoder that can
+                    map an input 3D pose to a special token to control an object, and show that the attention maps of these tokens
+                    can be constrained spatially to enable disentangled multi-object control.  
                   </p>
                 </td>
               </tr>
+
+            </tbody>
+
+            <tbody>
+              <tr onmouseout="linetr_stop()" onmouseover="linetr_start()" bgcolor="#ffffff">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='linetr_image'><video width=100% height=100% muted autoplay loop>
+                        <source src="images/linetr.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+
+                      </video></div>
+                    <img src='images/linetr.jpg' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function linetr_start() {
+                      document.getElementById('linetr_image').style.opacity = "1";
+                    }
+
+                    function linetr_stop() {
+                      document.getElementById('linetr_image').style.opacity = "0";
+                    }
+                    compass_control_stop()
+                  </script>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://ihdia.iiit.ac.in/LineTR/">
+                    <span class="papertitle">LineTR: Unified Text Line Segmentation for Challenging Palm Leaf Manuscripts  
+                  </a>
+                  <br>
+                  <strong>Vaibhav Agrawal</strong>,
+                  <a>Niharika Vadlamudi</a>,
+                  <a href="https://scholar.google.com/citations?user=glI39rIAAAAJ&hl=en&oi=sra">Muhammad Waseem</a>, 
+                  <a href="https://scholar.google.com/citations?user=2f_Q_K4AAAAJ&hl=en&oi=sra">Amal Joseph</a>, 
+                  <a>Sreenya Chitluri</a>,
+                  <a href="https://ravika.github.io/">Ravi Kiran Sarvadevabhatla</a>,
+                  <br>
+                  <em>ICPR</em>, 2024 
+                  <br>
+                  <a href="https://ihdia.iiit.ac.in/LineTR/">project page</a> 
+                  /
+                  <a href="https://drive.google.com/file/d/1Z2nMoeyhxy_HgHTrmcT_UD2LBV-Y0FhJ/view">paper</a>
+                  <p></p>
+                  <p>
+                    Treating text-line detection as a segmentation problem discards various inductive priors, and hampers OOD generalization. We parametrize text-lines as geometric structures, and learn a DETR-style network to predict these parameters instead.  
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr onmouseout="dator_stop()" onmouseover="dator_start()" bgcolor="#ffffff">
+                <td style="padding:16px;width:20%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='dator_image'><video width=100% height=100% muted autoplay loop>
+                        <source src="images/dator.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+
+                      </video></div>
+                    <img src='images/dator.jpg' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function dator_start() {
+                      document.getElementById('dator_image').style.opacity = "1";
+                    }
+
+                    function dator_stop() {
+                      document.getElementById('dator_image').style.opacity = "0";
+                    }
+                    compass_control_stop()
+                  </script>
+                </td>
+                <td style="padding:8px;width:80%;vertical-align:middle">
+                  <a href="https://ihdia.iiit.ac.in/dator/">
+                    <span class="papertitle">
+                  </a>
+                  <br>
+                  <a href="https://scholar.google.com/citations?user=fiFj4AwAAAAJ&hl=en">Aneesh Chavan</a>,
+                  <strong>Vaibhav Agrawal*</strong>,
+                  <a>Vineeth Bhat*</a>,
+                  <a>Sarthak Chittawar*</a>,
+                  <a href="https://siddharthsrivastava.github.io/">Siddharth Srivastava</a>,
+                  <a href="https://web.iitd.ac.in/~chetan/">Chetan Arora</a>,
+                  <a href="https://www.iiit.ac.in/faculty/k-madhava-krishna/">K Madhava Krishna</a>,
+                  <br>
+                  <em>Advances in Robotics</em>, 2025 
+                  <br>
+                  <a href="https://arxiv.org/abs/2409.12002">paper</a>
+                  <p></p>
+                  <p>
+                    We train a multi-modal (depth + RGB) network to perform the object re-identification task. Modality dropout ensures robustness to failure of one of the modalities. We demonstrate application of the model in a downstream SLAM pipeline. 
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
 
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -126,8 +224,10 @@
                   <br>
                   <p style="text-align:right;font-size:small;">
                     Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source
-                      code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics
-                    tags that you do not want on your own website &mdash; use the github code instead. Also, consider
+                      code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes
+                    analytics
+                    tags that you do not want on your own website &mdash; use the github code instead. Also,
+                    consider
                     using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a
                       href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
                   </p>
