@@ -51,6 +51,19 @@
               </tr>
             </tbody>
           </table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:40px auto 0px auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle">
+                  <h2>Updates</h2>
+                  <ul>
+                    <li><b>Mar 2025:</b> Our paper <i>Compass Control</i> was accepted to CVPR 2025. 🎉 See you in Nashville!</li>
+                    <li><b>Dec 2024:</b> Presented <i>LineTR</i> at ICPR 2024 in Kolkata.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -97,7 +110,8 @@
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <a href="https://rishubhpar.github.io/compasscontrol/">
-                    <span class="papertitle">Compass Control: Multi-Object Orientation Control for Text-to-Image Generation
+                    <span class="papertitle">Compass Control: Multi-Object Orientation Control for Text-to-Image
+                      Generation
                   </a>
                   <br>
                   <strong>Vaibhav Agrawal*</strong>,
@@ -107,14 +121,15 @@
                   <br>
                   <em>CVPR</em>, 2025
                   <br>
-                  <a href="https://rishubhpar.github.io/compasscontrol/">project page</a> 
+                  <a href="https://rishubhpar.github.io/compasscontrol/">project page</a>
                   /
                   <a href="https://arxiv.org/abs/2504.06752">arXiv</a>
                   <p></p>
                   <p>
                     A method for multi-object orientation control in T2I generation. We learn an encoder that can
-                    map an input 3D pose to a special token to control an object, and show that the attention maps of these tokens
-                    can be constrained spatially to enable disentangled multi-object control.  
+                    map an input 3D pose to a special token to control an object, and show that the attention maps of
+                    these tokens
+                    can be constrained spatially to enable disentangled multi-object control.
                   </p>
                 </td>
               </tr>
@@ -140,29 +155,32 @@
                     function linetr_stop() {
                       document.getElementById('linetr_image').style.opacity = "0";
                     }
-                    compass_control_stop()
+                    linetr_stop()
                   </script>
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
                   <a href="https://ihdia.iiit.ac.in/LineTR/">
-                    <span class="papertitle">LineTR: Unified Text Line Segmentation for Challenging Palm Leaf Manuscripts  
+                    <span class="papertitle">LineTR: Unified Text Line Segmentation for Challenging Palm Leaf
+                      Manuscripts
                   </a>
                   <br>
                   <strong>Vaibhav Agrawal</strong>,
                   <a>Niharika Vadlamudi</a>,
-                  <a href="https://scholar.google.com/citations?user=glI39rIAAAAJ&hl=en&oi=sra">Muhammad Waseem</a>, 
-                  <a href="https://scholar.google.com/citations?user=2f_Q_K4AAAAJ&hl=en&oi=sra">Amal Joseph</a>, 
+                  <a href="https://scholar.google.com/citations?user=glI39rIAAAAJ&hl=en&oi=sra">Muhammad Waseem</a>,
+                  <a href="https://scholar.google.com/citations?user=2f_Q_K4AAAAJ&hl=en&oi=sra">Amal Joseph</a>,
                   <a>Sreenya Chitluri</a>,
                   <a href="https://ravika.github.io/">Ravi Kiran Sarvadevabhatla</a>,
                   <br>
-                  <em>ICPR</em>, 2024 
+                  <em>ICPR</em>, 2024
                   <br>
-                  <a href="https://ihdia.iiit.ac.in/LineTR/">project page</a> 
+                  <a href="https://ihdia.iiit.ac.in/LineTR/">project page</a>
                   /
                   <a href="https://drive.google.com/file/d/1Z2nMoeyhxy_HgHTrmcT_UD2LBV-Y0FhJ/view">paper</a>
                   <p></p>
                   <p>
-                    Treating text-line detection as a segmentation problem discards various inductive priors, and hampers OOD generalization. We parametrize text-lines as geometric structures, and learn a DETR-style network to predict these parameters instead.  
+                    Treating text-line detection as a segmentation problem discards various inductive priors, and
+                    hampers OOD generalization. We parametrize text-lines as geometric structures, and learn a
+                    DETR-style network to predict these parameters instead.
                   </p>
                 </td>
               </tr>
@@ -187,12 +205,14 @@
                     function dator_stop() {
                       document.getElementById('dator_image').style.opacity = "0";
                     }
-                    compass_control_stop()
+                    dator_stop()
                   </script>
                 </td>
                 <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://ihdia.iiit.ac.in/dator/">
+                  <a>
                     <span class="papertitle">
+                      Towards Global Localization Using Multi-Modal Object-Instance Re-Identification
+                    </span>
                   </a>
                   <br>
                   <a href="https://scholar.google.com/citations?user=fiFj4AwAAAAJ&hl=en">Aneesh Chavan</a>,
@@ -203,12 +223,14 @@
                   <a href="https://web.iitd.ac.in/~chetan/">Chetan Arora</a>,
                   <a href="https://www.iiit.ac.in/faculty/k-madhava-krishna/">K Madhava Krishna</a>,
                   <br>
-                  <em>Advances in Robotics</em>, 2025 
+                  <em>Advances in Robotics</em>, 2025
                   <br>
                   <a href="https://arxiv.org/abs/2409.12002">paper</a>
                   <p></p>
                   <p>
-                    We train a multi-modal (depth + RGB) network to perform the object re-identification task. Modality dropout ensures robustness to failure of one of the modalities. We demonstrate application of the model in a downstream SLAM pipeline. 
+                    We train a multi-modal (depth + RGB) network to perform the object re-identification task. Modality
+                    dropout ensures robustness to failure of one of the modalities. We demonstrate application of the
+                    model in a downstream SLAM pipeline.
                   </p>
                 </td>
               </tr>
@@ -223,7 +245,7 @@
                 <td style="padding:0px">
                   <br>
                   <p style="text-align:right;font-size:small;">
-                    I borrowed this excellent website template from <a href="https://jonbarron.github.io/">here</a>. 
+                    I borrowed this excellent website template from <a href="https://jonbarron.github.io/">here</a>.
                   </p>
                 </td>
               </tr>
