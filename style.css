@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: 1100px; /* UPDATED: Increased max-width */
+  max-width: 1100px; 
   margin: 0 auto;
   background: white;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -39,16 +39,16 @@ body {
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: 3rem;
-  max-width: 900px; /* UPDATED: Adjusted for wider container, but keeping hero content from being too spread out */
+  max-width: 900px; 
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
 .hero-text {
   flex: 1;
-  min-width: 300px; /* This might need adjustment if hero-content is much wider */
+  min-width: 300px; 
 }
 
 .name {
@@ -63,7 +63,7 @@ body {
   font-size: 1.1rem; 
   line-height: 1.8;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-description a {
@@ -173,7 +173,7 @@ body {
 
 .paper-card {
   display: flex;
-  gap: 2rem; /* UPDATED: Increased gap slightly for larger media */
+  gap: 2rem; 
   padding: 2rem;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -193,8 +193,8 @@ body {
 
 .paper-media {
   flex-shrink: 0;
-  width: 240px; /* UPDATED: Increased width */
-  height: 180px; /* UPDATED: Increased height (maintaining 4:3 aspect ratio) */
+  width: 240px; 
+  height: 180px; 
   overflow: hidden; 
 }
 
@@ -302,39 +302,33 @@ body {
 
 /* --- Media Queries --- */
 
-/* For tablets and slightly smaller desktops where 1100px might be too wide */
-@media (max-width: 1200px) { /* Adjust this breakpoint as needed */
-  .container {
-      /* max-width: 960px; /* Or whatever feels right for this step down */
-      /* No change needed if 1100px is fine down to the next breakpoint */
-  }
+@media (max-width: 1200px) { 
+  /* No changes needed here if 1100px container is fine down to 992px */
 }
 
-@media (max-width: 992px) { /* Typical large tablet / small desktop breakpoint */
+@media (max-width: 992px) { 
   .paper-media {
-      width: 200px; /* Scale down paper media */
+      width: 200px; 
       height: 150px;
   }
   .paper-card {
-      gap: 1.5rem; /* Reduce gap */
+      gap: 1.5rem; 
   }
 }
 
-@media (max-width: 768px) { /* Mobile breakpoint */
+@media (max-width: 768px) { 
   .container {
       margin-top: 1rem;
       margin-bottom: 1rem;
-      /* padding-left: 0.5rem;
-      padding-right: 0.5rem; */ /* Optional: reduce padding on container for mobile */
   }
   .hero-content {
     flex-direction: column;
     text-align: center;
-    gap: 2rem; /* Reduce gap for mobile */
+    gap: 2rem; 
   }
 
   .profile-image {
-      width: 200px; /* Smaller profile image for mobile */
+      width: 200px; 
       height: 200px;
   }
 
@@ -343,15 +337,24 @@ body {
   }
 
   .paper-card {
-    flex-direction: column; /* Stack elements */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
-    gap: 1rem; /* Adjust gap for stacked layout */
+    gap: 1.5rem; /* MODIFIED: Increased gap slightly for better separation when stacked */
   }
 
   .paper-media {
-    width: 220px; /* Larger media for mobile when stacked, or adjust as preferred */
-    height: 165px; 
+    width: 90%; /* UPDATED: Make media take up most of the card width */
+    max-width: 320px; /* UPDATED: Prevent it from being overly huge on wider "mobile" views if card is full width */
+    height: auto;    /* UPDATED: Let height be determined by aspect ratio */
+    aspect-ratio: 4 / 3; /* UPDATED: Enforce a 4:3 aspect ratio for consistency */
+    margin-bottom: 0.5rem; /* Optional: add some space below the image before text */
+  }
+  /* Ensure the image/video inside .paper-media respects the new auto height */
+  .paper-media img,
+  .paper-media video {
+      height: 100%; /* Ensure it fills the aspect-ratio driven container */
+      /* object-fit: contain; is already set globally and should work well */
   }
 
   .social-links {
@@ -365,11 +368,11 @@ body {
   }
 
   .content-section {
-    padding: 2rem 1rem; /* Less horizontal padding on mobile */
+    padding: 2rem 1rem; 
   }
 }
 
-@media (max-width: 480px) { /* Extra small screens */
+@media (max-width: 480px) { 
   .name {
       font-size: 2rem;
   }
@@ -378,12 +381,8 @@ body {
       height: 160px;
   }
   .paper-media {
-    width: 100%; /* Make media full width of card on very small screens */
-    max-width: 280px; /* But not excessively large */
-    height: auto; /* Maintain aspect ratio */
-    aspect-ratio: 4 / 3; /* Explicitly set aspect ratio if height is auto */
-  }
-  .paper-media img, .paper-media video {
-      height: auto; /* Override fixed height if parent is auto */
+    width: 100%; /* On very small screens, let it be full width of the card */
+    max-width: 300px; /* Still cap it slightly */
+    /* aspect-ratio and height: auto will still apply from the 768px breakpoint */
   }
 }
