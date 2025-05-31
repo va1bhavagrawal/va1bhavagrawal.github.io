@@ -5,85 +5,154 @@
 }
 
 :root {
-  --primary-blue: #007bff; 
-  --hover-blue: #0056b3; 
-  --heading-black: #222; 
-  --body-text-color: #333;
-  --light-grey-bg: #f8f8f8; 
+  /* Dark Theme Colors */
+  --background-color: #121212; 
+  --background-overlay: rgba(0, 0, 0, 0.30); /* Dark overlay for the image (70% black - slightly darker for better contrast with transparent fg) */
+  
+  /* UPDATED: Container background with adjustable transparency */
+  /* Base color: #1e1e1e (rgb(30, 30, 30)) */
+  /* Alpha (transparency): 0.95 (95% opaque, 5% transparent). Adjust 0.95 as needed. */
+  --container-bg-opacity: 0.80; 
+  --container-bg: rgba(30, 30, 30, var(--container-bg-opacity)); 
+  
+  --container-border: rgba(255, 255, 255, 0.1); 
+
+  --text-primary: #e0e0e0; 
+  --text-secondary: #b0b0b0; 
+  --heading-color: #ffffff; 
+
+  --link-color: #61dafb; 
+  --link-hover-color: #82e9ff; 
+
+  --accent-color: var(--link-color); 
+  
+  --button-bg: rgba(255, 255, 255, 0.08); /* Slightly more opaque buttons */
+  --button-border: rgba(255, 255, 255, 0.2);
+  --button-hover-bg: var(--link-color);
+  --button-hover-text: #121212; 
+
+  /* UPDATED: Card backgrounds can also be transparent, or solid for contrast */
+  /* Option 1: Transparent cards (relative to body background) */
+  --card-bg-opacity: 0.9; /* Example: 90% opaque */
+  --card-base-color-rgb: 42, 42, 42; /* Corresponds to #2a2a2a */
+  --card-bg: rgba(var(--card-base-color-rgb), var(--card-bg-opacity));
+  
+  /* Option 2: Solid cards (if transparency makes them hard to read) */
+  /* --card-bg: #2a2a2a; */
+
+  --card-border: rgba(255, 255, 255, 0.08); /* Slightly less visible border for cards */
+  --card-hover-bg: rgba(var(--card-base-color-rgb), calc(var(--card-bg-opacity) + 0.05)); /* Slightly more opaque on hover */
+  /* --card-hover-bg: #333333; */ /* Solid hover */
+  
+  --featured-card-bg-opacity: 0.92;
+  --featured-card-base-color-rgb: 49, 49, 49; /* Corresponds to #313131 */
+  --featured-card-bg: rgba(var(--featured-card-base-color-rgb), var(--featured-card-bg-opacity));
+  /* --featured-card-bg: #313131; */ /* Solid featured */
+
+
   --main-font: 'Source Sans 3', sans-serif; 
 }
 
 body {
   font-family: var(--main-font); 
   line-height: 1.6;
-  color: var(--body-text-color);
-  background-color: #f5f5f5;
+  color: var(--text-primary); 
+  
+  background-image: url('images/bg3.jpeg'); /* <<< REPLACE THIS PATH */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: var(--background-color); 
+
   min-height: 100vh;
+  padding-top: 3rem; 
+  padding-bottom: 3rem;
+  position: relative; 
+}
+
+body::before {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-overlay);
+  z-index: -1; 
 }
 
 .container {
   max-width: 1100px; 
-  margin: 0 auto;
-  background: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 auto; 
+  background: var(--container-bg); /* USING THE NEW TRANSPARENT VARIABLE */
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5); 
+  border-radius: 10px; 
+  border: 1px solid var(--container-border);
+  overflow: hidden; 
 }
 
+/* ... (rest of the CSS from the previous dark theme version) ... */
+/* All elements inside .container will now sit on this semi-transparent background */
+/* Ensure their individual backgrounds (if any) are also considered. */
+/* For example, .updates-list li and .paper-card already use --card-bg */
+
 .hero-section {
-  background: white;
-  padding: 4rem 2rem;
-  border-bottom: 1px solid #eee;
+  padding: 4rem 2.5rem; 
+  text-align: center; 
+  border-bottom: 1px solid var(--container-border); 
 }
 
 .hero-content {
   display: flex;
+  flex-direction: column; 
   align-items: center;
-  justify-content: left;
-  gap: 3rem;
-  max-width: 900px; 
+  justify-content: center;
+  gap: 2.5rem; 
+  max-width: 700px; 
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .hero-text {
-  flex: 1;
-  min-width: 300px; 
+  /* No specific changes needed here based on transparency */
 }
 
 .name {
-  font-size: 3rem; 
+  font-size: 3.2rem; 
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--heading-black); 
-  text-align: center;
+  color: var(--heading-color); 
 }
 
 .hero-description {
-  font-size: 1.1rem; 
+  font-size: 1.15rem; 
   line-height: 1.8;
-  margin-bottom: 2rem;
-  text-align: left;
+  margin-bottom: 2.5rem;
+  color: var(--text-secondary); 
 }
 
 .hero-description a {
-  color: var(--primary-blue); 
+  color: var(--link-color); 
   text-decoration: none;
+  font-weight: 500; 
   transition: color 0.3s ease;
 }
 
 .hero-description a:hover {
-  color: var(--hover-blue); 
+  color: var(--link-hover-color); 
   text-decoration: underline; 
 }
 
 .profile-image {
-  width: 280px; 
-  height: 280px; 
+  width: 220px; 
+  height: 220px; 
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #ddd;
+  /* Make border slightly more opaque than container or use a solid light color for definition */
+  border: 4px solid rgba(var(--card-base-color-rgb), calc(var(--container-bg-opacity) + 0.03)); 
+  box-shadow: 0 0 25px rgba(0,0,0,0.3); 
   transition: transform 0.3s ease;
+  order: -1; 
 }
 
 .profile-image:hover {
@@ -93,81 +162,98 @@ body {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 0.8rem; 
+  gap: 1rem; 
   flex-wrap: wrap;
 }
 
 .social-links a {
-  color: var(--primary-blue); 
+  color: var(--link-color); 
   text-decoration: none;
-  padding: 0.25rem 0.6rem; 
-  border: 1px solid var(--primary-blue); 
-  background: var(--light-grey-bg);
+  padding: 0.4rem 0.9rem; 
+  border: 1px solid var(--button-border); 
+  background: var(--button-bg);
+  border-radius: 6px; 
   transition: all 0.3s ease;
   display: inline-flex; 
   align-items: center; 
-  gap: 0.4em; 
+  gap: 0.5em; 
   font-size: 0.9rem; 
 }
 
 .social-links a:hover {
-  background: var(--primary-blue); 
-  color: white;
-  border-color: var(--primary-blue); 
-  transform: translateY(-2px);
+  background: var(--button-hover-bg); 
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-bg); 
+  transform: translateY(-2px) scale(1.02);
 }
 
 .content-section {
-  padding: 3rem 2rem;
+  padding: 3.5rem 2.5rem;
 }
 
 .section-title {
-  font-size: 2rem; 
+  font-size: 2.3rem; 
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: var(--heading-black); 
+  margin-bottom: 2.5rem; 
+  color: var(--heading-color); 
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem; 
+  text-align: center;
 }
 
 .section-title:after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: var(--heading-black); 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 80px; 
+  height: 3px; 
+  background: var(--accent-color); 
+  border-radius: 1.5px;
 }
 
 .research-intro {
-  font-size: 1.1rem; 
-  line-height: 1.8;
-  color: #555; 
-  margin-bottom: 2rem;
+  font-size: 1.15rem; 
+  line-height: 1.9; 
+  color: var(--text-secondary); 
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 750px; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .updates-list {
   list-style: none;
   padding: 0;
+  max-width: 700px; 
+  margin: 0 auto 2rem auto;
 }
 
 .updates-list li {
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  background: #f8f8f8;
-  border-left: 3px solid var(--primary-blue); 
-  transition: transform 0.2s ease;
+  padding: 1.2rem 1.5rem; 
+  margin-bottom: 1rem;
+  background: var(--card-bg); /* Uses the potentially transparent card bg */
+  border-left: 4px solid var(--accent-color); 
+  border-radius: 6px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  color: var(--text-primary);
+}
+
+.updates-list li strong {
+  color: var(--heading-color);
 }
 
 .updates-list li:hover {
   transform: translateX(5px);
-  background: #f0f0f0;
+  background: var(--card-hover-bg); 
 }
 
 .paper-grid {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem; 
   margin-top: 2rem;
 }
 
@@ -175,20 +261,23 @@ body {
   display: flex;
   gap: 2rem; 
   padding: 2rem;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  border: 1px solid #eee;
+  background: var(--card-bg); /* Uses the potentially transparent card bg */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+  border: 1px solid var(--card-border); 
+  border-radius: 8px; 
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 .paper-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
+  background: var(--card-hover-bg);
 }
 
 .paper-card.featured {
-  background: #fafafa;
-  border-color: var(--primary-blue); 
+  background: var(--featured-card-bg); /* Uses the potentially transparent featured card bg */
+  border-color: var(--accent-color); 
+  box-shadow: 0 0 15px rgba(var(--accent-color), 0.15); 
 }
 
 .paper-media {
@@ -196,6 +285,8 @@ body {
   width: 240px; 
   height: 180px; 
   overflow: hidden; 
+  border-radius: 6px; 
+  background-color: rgba(0,0,0,0.2); 
 }
 
 .paper-media img,
@@ -210,42 +301,48 @@ body {
 }
 
 .paper-title {
-  font-size: 1.2rem; 
+  font-size: 1.25rem; 
   font-weight: 600; 
-  color: var(--primary-blue); 
+  color: var(--link-color); 
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem; 
   display: block;
   transition: color 0.3s ease;
 }
 
 .paper-title:hover {
-  color: var(--hover-blue); 
+  color: var(--link-hover-color); 
   text-decoration: underline;
 }
 
 .paper-authors {
-  color: var(--body-text-color); 
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  color: var(--text-secondary); 
+  margin-bottom: 0.75rem;
+  line-height: 1.6; 
+  font-size: 0.9rem; 
+}
+
+.paper-authors strong { 
+  color: var(--text-primary); 
+  font-weight: 600;
 }
 
 .paper-authors a {
-  color: var(--primary-blue); 
+  color: var(--link-color); 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .paper-authors a:hover {
-  color: var(--hover-blue); 
-  text-decoration: underline;
+  color: var(--link-hover-color); 
 }
 
 .paper-venue {
   font-weight: 600; 
   font-style: italic;
-  color: var(--body-text-color); 
-  margin-bottom: 1rem;
+  color: var(--text-secondary); 
+  margin-bottom: 1.2rem; 
+  font-size: 0.9rem; 
 }
 
 .paper-links {
@@ -253,136 +350,146 @@ body {
 }
 
 .paper-links a {
-  color: var(--primary-blue); 
+  color: var(--link-color); 
   text-decoration: none;
-  margin-right: 1rem;
-  font-size: 0.9rem; 
-  padding: 0.3rem 0.8rem;
-  border: 1px solid var(--primary-blue); 
+  margin-right: 0.8rem; 
+  font-size: 0.85rem; 
+  padding: 0.35rem 0.8rem; 
+  border: 1px solid var(--button-border); 
+  background: var(--button-bg);
+  border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 .paper-links a:hover {
-  background: var(--primary-blue); 
-  color: white;
+  background: var(--button-hover-bg); 
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-bg);
 }
 
 .paper-description {
-  color: #555;
+  color: var(--text-primary); 
   font-size: 0.95rem; 
-  line-height: 1.6;
+  line-height: 1.7; 
 }
 
 .equal-contrib {
   font-style: italic;
-  color: #666;
+  color: var(--text-secondary); 
   margin-bottom: 1rem;
   padding-left: 0;
+  font-size: 0.85rem;
 }
 
 .footer {
   text-align: center;
-  padding: 2rem;
-  color: #666;
+  padding: 3rem 2rem; 
+  color: var(--text-secondary);
   font-size: 0.9rem;
-  background: #f8f8f8;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--container-border); 
+  margin-top: 2rem; 
 }
 
 .footer a {
-  color: var(--primary-blue); 
+  color: var(--link-color); 
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: var(--hover-blue); 
+  color: var(--link-hover-color); 
   text-decoration: underline;
 }
 
-/* --- Media Queries --- */
-
-@media (max-width: 1200px) { 
-  /* No changes needed here if 1100px container is fine down to 992px */
-}
+/* Media Queries remain largely the same as the previous dark theme version */
+/* The transparency will apply across all screen sizes based on the root variables */
 
 @media (max-width: 992px) { 
+  body {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+  }
+  .container {
+      max-width: 95%; 
+      border-radius: 8px;
+  }
   .paper-media {
       width: 200px; 
       height: 150px;
   }
-  .paper-card {
-      gap: 1.5rem; 
+  .profile-image {
+      width: 200px;
+      height: 200px;
   }
 }
 
 @media (max-width: 768px) { 
+  body {
+      padding-top: 1.5rem; 
+      padding-bottom: 1.5rem;
+  }
   .container {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      max-width: 95%; 
+      border-radius: 6px; 
   }
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem; 
+  .hero-section {
+    padding: 3rem 1.5rem;
   }
-
   .profile-image {
-      width: 200px; 
-      height: 200px;
+      width: 160px; 
+      height: 160px;
   }
-
   .name {
     font-size: 2.5rem; 
   }
-
+  .section-title {
+      font-size: 2rem;
+      padding-bottom: 0.75rem;
+  }
   .paper-card {
     flex-direction: column; 
     align-items: center;
     text-align: center;
-    gap: 1.5rem; /* MODIFIED: Increased gap slightly for better separation when stacked */
+    gap: 1.5rem; 
+    padding: 1.5rem; 
   }
-
   .paper-media {
-    width: 90%; /* UPDATED: Make media take up most of the card width */
-    max-width: 320px; /* UPDATED: Prevent it from being overly huge on wider "mobile" views if card is full width */
-    height: auto;    /* UPDATED: Let height be determined by aspect ratio */
-    aspect-ratio: 4 / 3; /* UPDATED: Enforce a 4:3 aspect ratio for consistency */
-    margin-bottom: 0.5rem; /* Optional: add some space below the image before text */
+    width: 90%; 
+    max-width: 300px; 
+    height: auto;    
+    aspect-ratio: 4 / 3; 
+    margin-bottom: 1rem; 
   }
-  /* Ensure the image/video inside .paper-media respects the new auto height */
-  .paper-media img,
-  .paper-media video {
-      height: 100%; /* Ensure it fills the aspect-ratio driven container */
-      /* object-fit: contain; is already set globally and should work well */
-  }
-
-  .social-links {
-    gap: 0.6rem; 
-  }
-
-  .social-links a {
-    padding: 0.2rem 0.5rem; 
-    font-size: 0.85rem; 
-    gap: 0.3em; 
-  }
-
   .content-section {
-    padding: 2rem 1rem; 
+    padding: 2.5rem 1.5rem; 
+  }
+  .footer {
+      padding: 2.5rem 1.5rem;
   }
 }
 
 @media (max-width: 480px) { 
   .name {
-      font-size: 2rem;
+      font-size: 2.1rem;
   }
   .profile-image {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
+  }
+  .section-title {
+      font-size: 1.8rem;
+  }
+  .research-intro {
+      font-size: 1.05rem;
   }
   .paper-media {
-    width: 100%; /* On very small screens, let it be full width of the card */
-    max-width: 300px; /* Still cap it slightly */
-    /* aspect-ratio and height: auto will still apply from the 768px breakpoint */
+    max-width: 280px; 
+  }
+  .paper-title {
+      font-size: 1.15rem;
+  }
+  .paper-description {
+      font-size: 0.9rem;
   }
 }
