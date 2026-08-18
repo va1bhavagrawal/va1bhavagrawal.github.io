@@ -1,310 +1,507 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaibhav Agrawal</title>
   <meta name="author" content="Vaibhav Agrawal">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Vaibhav Agrawal's academic homepage - Computer Vision researcher focusing on predictive vision models, generative diffusion models, and JEPA.">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-  <!-- Add Lato Font -->
+
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <!-- Font Awesome CDN for icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Academicons for Academic Icons (arXiv, etc.) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- ... rest of your HTML body remains the same ... -->
-  <div class="container">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="name">Vaibhav Agrawal</h1>
-          <p class="hero-description">
-            I am a computer vision researcher and an incoming pre-doctoral researcher at <a
-              href="https://cispa.de/en">CISPA Helmholtz Center</a>, advised by <a href="https://genintel.de/">Adam
-              Kortylewski</a>. I am interested in predictive vision models (e.g., generative models, JEPA, etc.).
-            Currently, my research focuses on introducing control mechanisms in diffusion models, and leveraging them
-            for perceptual tasks. My work in these areas has been presented as first-author papers at top-tier CV
-            conferences.<br><br>
 
-            Previously, I spent beautiful years at <a href="https://cvit.iiit.ac.in/">CVIT, IIIT Hyderabad </a>, where I
-            was fortunate to be advised by <a href="https://ravika.github.io/">Ravi Kiran S</a> and co-advised by <a
-              href="https://cds.iisc.ac.in/faculty/venky/">Venkatesh Babu R</a> (from <a
-              href="https://val.cds.iisc.ac.in/">IISc Bengaluru</a>).<br><br>
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="#home" class="brand-title">Vaibhav Agrawal</a>
+      <div class="nav-right-group">
+        <ul class="nav-tabs" role="tablist">
+          <li><a href="#home" class="tab-btn active" data-tab="home" role="tab" aria-selected="true"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#publications" class="tab-btn" data-tab="publications" role="tab"
+              aria-selected="false"><i class="fas fa-book-open"></i> Publications</a></li>
+          <li><a href="#blogs" class="tab-btn" data-tab="blogs" role="tab" aria-selected="false"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+          <li><a href="#other-stuff" class="tab-btn" data-tab="other-stuff" role="tab" aria-selected="false"><i class="fas fa-compact-disc"></i> Other
+              Stuff</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode"
+          title="Switch theme">
+          <i class="fas fa-sun"></i>
+          <span class="theme-mode-text"><span class="mode-light">light</span><span class="mode-sep">/</span><span class="mode-dark">dark</span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-            When I am not working, I am usually listening to music or playing the piano. I love receiving emails and
-            messages! Hence, feel free to reach out to me in case you have any questions or suggestions about research.
-          </p>
-          <div class="social-links">
-            <a href="mailto:agrvaibhav19@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://drive.google.com/file/d/1D063ksnd3S9SAVwi4RbLa0EJMkfdFRhm/view?usp=drive_link"><i
-                class="fas fa-file-lines"></i> CV</a>
-            <a href="https://scholar.google.com/citations?user=3tFzDucAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i>
-              Scholar</a>
-            <a href="https://x.com/VA1BHAVAGRAWAL"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
-            <a href="https://github.com/va1bhavagrawal"><i class="fa-brands fa-github"></i> Github</a>
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- ==========================================
+         TAB 1: HOME
+         ========================================== -->
+    <section id="panel-home" class="tab-panel active" role="tabpanel">
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="profile-avatar-wrapper">
+          <img src="images/me.jpeg" alt="Vaibhav Agrawal" class="profile-avatar">
+        </div>
+        <div class="hero-intro">
+          <div class="hero-bio">
+            <p>
+              Hi! I am Vaibhav, a computer vision researcher working with <a href="https://genintel.de/" target="_blank"
+                rel="noopener noreferrer">Adam Kortylewski</a>.
+              My research is centered around models that can imagine the physical world (e.g., generative models)
+              and how this capability can be used for visual understanding and embodied intelligence. In the past, I
+              have
+              worked on object-level 3D control in text-to-image generative models.
+            </p>
+            <p>
+              Previously, I spent beautiful years at
+              <a href="https://cvit.iiit.ac.in/" target="_blank" rel="noopener noreferrer">CVIT, IIIT Hyderabad</a>,
+              where I was fortunate to be advised by
+              <a href="https://ravika.github.io/" target="_blank" rel="noopener noreferrer">Ravi Kiran S</a>
+              and co-advised by
+              <a href="https://cds.iisc.ac.in/faculty/venky/" target="_blank" rel="noopener noreferrer">Venkatesh Babu
+                R</a>
+              (from <a href="https://val.cds.iisc.ac.in/" target="_blank" rel="noopener noreferrer">IISc Bengaluru</a>).
+            </p>
+            <p>
+              I spend most of my time either thinking about research or doing experiments; some of that work can be
+              found on my <a href="#publications">publications</a> and <a href="#blogs">blogs</a>.
+              When I am not working, I am usually listening to music or playing the piano. I love receiving emails!
+              Hence, feel free to reach out to discuss about anything.
+            </p>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links-bar">
+            <a href="mailto:agrvaibhav19@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
+            <span class="link-separator">/</span>
+            <a href="https://drive.google.com/file/d/1D063ksnd3S9SAVwi4RbLa0EJMkfdFRhm/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="social-link"><i class="fas fa-file-lines"></i> CV</a>
+            <span class="link-separator">/</span>
+            <a href="https://scholar.google.com/citations?user=3tFzDucAAAAJ&hl=en" target="_blank"
+              rel="noopener noreferrer" class="social-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <span class="link-separator">/</span>
+            <a href="https://x.com/VA1BHAVAGRAWAL" target="_blank" rel="noopener noreferrer"
+              class="social-link"><i class="fab fa-x-twitter"></i> Twitter</a>
+            <span class="link-separator">/</span>
+            <a href="https://github.com/va1bhavagrawal" target="_blank" rel="noopener noreferrer"
+              class="social-link"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
-        <img src="images/me_.jpeg" alt="Vaibhav Agrawal" class="profile-image">
       </div>
     </section>
 
-    <!-- Updates Section -->
-    <section class="content-section">
-      <h2 class="section-title">Updates</h2>
-      <ul class="updates-list">
-        <li><strong>Mar 2026:</strong> Our paper <a href="https://seethrough3d.github.io"><em>SeeThrough3D</em></a> was
-          accepted to CVPR 2026. 🎉 See you in Denver!</li>
-        <li><strong>Sep 2025:</strong> Our team won the second prize at <a
-            href="https://www.gbm-moc.in/gyansetu"><em>Gyan-Setu: National AI Innovation Challenge for India’s
-              Manuscript Heritage</em></a>. Great honor!</li>
-        <li><strong>Mar 2025:</strong> Our paper <a href="https://rishubhpar.github.io/compasscontrol/"><em>Compass
-              Control</em></a> was accepted to CVPR 2025. 🎉 See you in Nashville!</li>
-        <li><strong>Dec 2024:</strong> Presented <a href="https://ihdia.iiit.ac.in/LineTR/"><em>LineTR</em></a> at ICPR
-          2024 in Kolkata.</li>
-      </ul>
-    </section>
 
-    <!-- Publications Section -->
-    <section class="content-section">
-      <h2 class="section-title">Publications</h2>
-      <p class="equal-contrib">* denotes equal contribution, &dagger; denotes equal advising.</p>
+    <!-- ==========================================
+         TAB 2: PUBLICATIONS
+         ========================================== -->
+    <section id="panel-publications" class="tab-panel" role="tabpanel">
+      <div class="publications-header">
+        <h2 class="section-heading">Publications</h2>
+        <p class="equal-contrib-note">* denotes equal contribution, &dagger; denotes equal advising.</p>
+      </div>
 
-      <div class="paper-grid">
+      <div class="papers-list">
 
-        <!-- PartConcepts -->
-        <div class="paper-card" data-gif-duration="3170">
-          <div class="paper-media">
-            <img src="images/partconcepts_first.jpg" alt="PartConcepts" class="static-thumb">
-            <img src="images/partconcepts.gif" alt="PartConcepts" class="gif-thumb">
-            <img src="images/partconcepts_last.jpg" alt="PartConcepts" class="last-thumb">
+        <!-- 1. PartConcepts -->
+        <article class="paper-card">
+          <div class="paper-media-box" data-duration="3170" data-gif-src="images/partconcepts.gif">
+            <img src="images/partconcepts_first.jpg" alt="PartConcepts Start Frame" class="static-thumb">
+            <img alt="PartConcepts Animation" class="gif-thumb">
+            <img src="images/partconcepts_last.jpg" alt="PartConcepts Final Frame" class="last-thumb">
           </div>
-          <div class="paper-content">
+          <div class="paper-details">
             <a href="https://va1bhavagrawal.github.io" class="paper-title">
               PartConcepts: A Unified Mechanism for Fine-Grained Part-Level Localization and Generation
             </a>
             <div class="paper-authors">
               <strong>Vaibhav Agrawal</strong>,
-              <a href="https://www.linkedin.com/in/varghese-kuruvilla-268965173/">Varghese Kuruvilla</a>,
-              <a href="https://rangwani-harsh.github.io/about/">Harsh Rangwani</a>,
-              <a href="https://ravika.github.io/">Ravi Kiran S</a>
+              <a href="https://www.linkedin.com/in/varghese-kuruvilla-268965173/" target="_blank"
+                rel="noopener noreferrer">Varghese Kuruvilla</a>,
+              <a href="https://rangwani-harsh.github.io/about/" target="_blank" rel="noopener noreferrer">Harsh
+                Rangwani</a>,
+              <a href="https://ravika.github.io/" target="_blank" rel="noopener noreferrer">Ravi Kiran S</a>
             </div>
-            <div class="paper-venue">Under peer review, selected for presentation at CVPR 2026 <a
-                href="https://generative-vision.github.io/workshop-CVPR-26/">GCV workshop</a></div>
-            <!-- <div class="paper-links">
-              <a href="https://seethrough3d.github.io">project page</a>
-              <a href="https://arxiv.org/abs/2602.23359">arXiv</a>
-            </div> -->
-            <p class="paper-description">
+            <div class="paper-venue-badge">
+              Under peer review, selected for presentation at <strong>CVPR 2026</strong>
+              <a href="https://generative-vision.github.io/workshop-CVPR-26/" target="_blank"
+                rel="noopener noreferrer">GCV workshop</a>
+            </div>
+            <p class="paper-summary">
               Finetuning a T2I diffusion model's text encoder for strong attention localization of part-level
-              concepts (e.g., 'left-front leg'); this
-              leads to accurate part-level
-              instance segmentation and generative control.
+              concepts (e.g., 'left-front leg'); this leads to accurate part-level instance segmentation and generative
+              control.
             </p>
           </div>
-        </div>
+        </article>
 
-        <!-- SeeThrough3D -->
-        <div class="paper-card highlighted" data-gif-duration="1540">
-          <div class="paper-media">
-            <img src="images/seethrough3d_first.jpg" alt="SeeThrough3D" class="static-thumb">
-            <img src="images/seethrough3d.gif" alt="SeeThrough3D" class="gif-thumb">
-            <img src="images/seethrough3d_last.jpg" alt="SeeThrough3D" class="last-thumb">
+        <!-- 2. SeeThrough3D -->
+        <article class="paper-card highlighted">
+          <div class="paper-media-box" data-duration="1540" data-gif-src="images/seethrough3d.gif">
+            <img src="images/seethrough3d_first.jpg" alt="SeeThrough3D Start Frame" class="static-thumb">
+            <img alt="SeeThrough3D Animation" class="gif-thumb">
+            <img src="images/seethrough3d_last.jpg" alt="SeeThrough3D Final Frame" class="last-thumb">
           </div>
-          <div class="paper-content">
-            <a href="https://seethrough3d.github.io" class="paper-title">
+          <div class="paper-details">
+            <a href="https://seethrough3d.github.io" target="_blank" rel="noopener noreferrer" class="paper-title">
               SeeThrough3D: Occlusion Aware 3D-Control in Text-to-Image Generation
             </a>
             <div class="paper-authors">
               <strong>Vaibhav Agrawal</strong>,
-              <a href="https://rishubhpar.github.io/">Rishubh Parihar</a>,
-              <a href="https://www.linkedin.com/in/pradhaan-s-bhat">Pradhaan S Bhat</a>,
-              <a href="https://ravika.github.io/">Ravi Kiran S<sup>&dagger;</sup></a>,
-              <a href="https://cds.iisc.ac.in/faculty/venky/">Venkatesh Babu R<sup>&dagger;</sup></a>
+              <a href="https://rishubhpar.github.io/" target="_blank" rel="noopener noreferrer">Rishubh Parihar</a>,
+              <a href="https://www.linkedin.com/in/pradhaan-s-bhat" target="_blank" rel="noopener noreferrer">Pradhaan S
+                Bhat</a>,
+              <a href="https://ravika.github.io/" target="_blank" rel="noopener noreferrer">Ravi Kiran
+                S<sup>&dagger;</sup></a>,
+              <a href="https://cds.iisc.ac.in/faculty/venky/" target="_blank" rel="noopener noreferrer">Venkatesh Babu
+                R<sup>&dagger;</sup></a>
             </div>
-            <div class="paper-venue">CVPR 2026, also selected for presentation at CVPR 2026 <a
-                href="https://generative-vision.github.io/workshop-CVPR-26/">GCV</a> and <a
-                href="https://musi-workshop-2nd.github.io/">MUSI</a> workshops, and as a CVPR 2026 <a
-                href="https://cvpr.thecvf.com/Conferences/2026/CallForDemos">demonstration</a></div>
-            <div class="paper-links">
-              <a href="https://seethrough3d.github.io">project page</a>
-              <a href="https://arxiv.org/abs/2602.23359">arXiv</a>
+            <div class="paper-venue-badge">
+              <strong>CVPR 2026</strong>, also selected for presentation at CVPR 2026
+              <a href="https://generative-vision.github.io/workshop-CVPR-26/" target="_blank"
+                rel="noopener noreferrer">GCV</a> and
+              <a href="https://musi-workshop-2nd.github.io/" target="_blank" rel="noopener noreferrer">MUSI</a>
+              workshops, and as a CVPR 2026
+              <a href="https://cvpr.thecvf.com/Conferences/2026/CallForDemos" target="_blank"
+                rel="noopener noreferrer">demonstration</a>
             </div>
-            <p class="paper-description">
-              A 3D bounding box layout consisting of translucent boxes effectively models occluding scene regions; this
-              representation is used to spatially condition a T2I model to enable occlusion aware 3D control.
+            <div class="paper-links-group">
+              <a href="https://seethrough3d.github.io" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> project page</a>
+              <span class="link-separator">/</span>
+              <a href="https://arxiv.org/abs/2602.23359" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i> arXiv</a>
+            </div>
+            <p class="paper-summary">
+              A 3D bounding box layout consisting of translucent boxes effectively models occluding scene regions;
+              this representation is used to spatially condition a T2I model to enable occlusion aware 3D control.
             </p>
           </div>
-        </div>
+        </article>
 
-        <!-- Compass Control Paper -->
-        <div class="paper-card highlighted" data-gif-duration="2250">
-          <div class="paper-media">
-            <img src="images/compass_first.jpg" alt="Compass Control" class="static-thumb">
-            <img src="images/compass.gif" alt="Compass Control" class="gif-thumb">
-            <img src="images/compass_last.jpg" alt="Compass Control" class="last-thumb">
+        <!-- 3. Compass Control -->
+        <article class="paper-card highlighted">
+          <div class="paper-media-box" data-duration="2250" data-gif-src="images/compass.gif">
+            <img src="images/compass_first.jpg" alt="Compass Control Start Frame" class="static-thumb">
+            <img alt="Compass Control Animation" class="gif-thumb">
+            <img src="images/compass_last.jpg" alt="Compass Control Final Frame" class="last-thumb">
           </div>
-          <div class="paper-content">
-            <a href="https://rishubhpar.github.io/compasscontrol/" class="paper-title">
+          <div class="paper-details">
+            <a href="https://rishubhpar.github.io/compasscontrol/" target="_blank" rel="noopener noreferrer"
+              class="paper-title">
               Compass Control: Multi-Object Orientation Control for Text-to-Image Generation
             </a>
             <div class="paper-authors">
-              <a href="https://rishubhpar.github.io/">Rishubh Parihar*</a>,
+              <a href="https://rishubhpar.github.io/" target="_blank" rel="noopener noreferrer">Rishubh Parihar*</a>,
               <strong>Vaibhav Agrawal*</strong>,
-              <a href="https://scholar.google.com/citations?user=Hup_9BkAAAAJ&hl=en">Sachidanand VS</a>,
-              <a href="https://cds.iisc.ac.in/faculty/venky/">Venkatesh Babu Radhakrishnan</a>
+              <a href="https://scholar.google.com/citations?user=Hup_9BkAAAAJ&hl=en" target="_blank"
+                rel="noopener noreferrer">Sachidanand VS</a>,
+              <a href="https://cds.iisc.ac.in/faculty/venky/" target="_blank" rel="noopener noreferrer">Venkatesh Babu
+                Radhakrishnan</a>
             </div>
-            <div class="paper-venue">CVPR 2025</div>
-            <div class="paper-links">
-              <a href="https://rishubhpar.github.io/compasscontrol/">project page</a>
-              <a href="https://arxiv.org/abs/2504.06752">arXiv</a>
+            <div class="paper-venue-badge">
+              <strong>CVPR 2025</strong>
             </div>
-            <p class="paper-description">
+            <div class="paper-links-group">
+              <a href="https://rishubhpar.github.io/compasscontrol/" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> project page</a>
+              <span class="link-separator">/</span>
+              <a href="https://arxiv.org/abs/2504.06752" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i> arXiv</a>
+            </div>
+            <p class="paper-summary">
               A continuous textual token is learnt to model generalized object orientation, and multiple such tokens can
-              be combined to enable
-              disentangled multi-object control, using attention based disentanglement.
+              be combined to enable disentangled multi-object control, using attention based disentanglement.
             </p>
           </div>
-        </div>
+        </article>
 
-        <!-- LineTR Paper -->
-        <div class="paper-card" data-gif-duration="3170">
-          <div class="paper-media">
-            <img src="images/linetr_first.jpg" alt="LineTR" class="static-thumb">
-            <img src="images/linetr.gif" alt="LineTR" class="gif-thumb">
-            <img src="images/linetr_last.jpg" alt="LineTR" class="last-thumb">
+        <!-- 4. LineTR -->
+        <article class="paper-card">
+          <div class="paper-media-box" data-duration="3170" data-gif-src="images/linetr.gif">
+            <img src="images/linetr_first.jpg" alt="LineTR Start Frame" class="static-thumb">
+            <img alt="LineTR Animation" class="gif-thumb">
+            <img src="images/linetr_last.jpg" alt="LineTR Final Frame" class="last-thumb">
           </div>
-          <div class="paper-content">
-            <a href="https://ihdia.iiit.ac.in/LineTR/" class="paper-title">
+          <div class="paper-details">
+            <a href="https://ihdia.iiit.ac.in/LineTR/" target="_blank" rel="noopener noreferrer" class="paper-title">
               LineTR: Unified Text Line Segmentation for Challenging Palm Leaf Manuscripts
             </a>
             <div class="paper-authors">
               <strong>Vaibhav Agrawal</strong>,
               Niharika Vadlamudi,
-              <a href="https://scholar.google.com/citations?user=glI39rIAAAAJ&hl=en&oi=sra">Muhammad Waseem</a>,
-              <a href="https://scholar.google.com/citations?user=2f_Q_K4AAAAJ&hl=en&oi=sra">Amal Joseph</a>,
+              <a href="https://scholar.google.com/citations?user=glI39rIAAAAJ&hl=en&oi=sra" target="_blank"
+                rel="noopener noreferrer">Muhammad Waseem</a>,
+              <a href="https://scholar.google.com/citations?user=2f_Q_K4AAAAJ&hl=en&oi=sra" target="_blank"
+                rel="noopener noreferrer">Amal Joseph</a>,
               Sreenya Chitluri,
-              <a href="https://ravika.github.io/">Ravi Kiran Sarvadevabhatla</a>
+              <a href="https://ravika.github.io/" target="_blank" rel="noopener noreferrer">Ravi Kiran
+                Sarvadevabhatla</a>
             </div>
-            <div class="paper-venue">ICPR 2024</div>
-            <div class="paper-links">
-              <a href="https://ihdia.iiit.ac.in/LineTR/">project page</a>
-              <a href="https://drive.google.com/file/d/1Z2nMoeyhxy_HgHTrmcT_UD2LBV-Y0FhJ/view">paper</a>
+            <div class="paper-venue-badge">
+              <strong>ICPR 2024</strong>
             </div>
-            <p class="paper-description">
+            <div class="paper-links-group">
+              <a href="https://ihdia.iiit.ac.in/LineTR/" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> project page</a>
+              <span class="link-separator">/</span>
+              <a href="https://drive.google.com/file/d/1Z2nMoeyhxy_HgHTrmcT_UD2LBV-Y0FhJ/view" target="_blank"
+                rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> paper</a>
+            </div>
+            <p class="paper-summary">
               A line-based parametrization over pixel-wise segmentation enables highly accurate text-line prediction.
-              Further, a
-              context-adaptive patching scheme
-              enables generalization to arbitrary documents.
+              Further, a context-adaptive patching scheme enables generalization to arbitrary documents.
             </p>
           </div>
-        </div>
+        </article>
 
-        <!-- DATOR Paper -->
-        <div class="paper-card">
-          <div class="paper-media"></div>
-          <div class="paper-content">
-            <div class="paper-title">
+        <!-- 5. DATOR -->
+        <article class="paper-card">
+          <div class="paper-media-box">
+            <img src="images/dator.jpg" alt="DATOR Thumbnail" class="static-thumb">
+          </div>
+          <div class="paper-details">
+            <div class="paper-title" style="color: var(--heading-color);">
               Towards Global Localization Using Multi-Modal Object-Instance Re-Identification
             </div>
             <div class="paper-authors">
-              <a href="https://scholar.google.com/citations?user=fiFj4AwAAAAJ&hl=en">Aneesh Chavan</a>,
+              <a href="https://scholar.google.com/citations?user=fiFj4AwAAAAJ&hl=en" target="_blank"
+                rel="noopener noreferrer">Aneesh Chavan</a>,
               <strong>Vaibhav Agrawal*</strong>,
               Vineeth Bhat*,
               Sarthak Chittawar*,
-              <a href="https://siddharthsrivastava.github.io/">Siddharth Srivastava</a>,
-              <a href="https://web.iitd.ac.in/~chetan/">Chetan Arora</a>,
-              <a href="https://www.iiit.ac.in/faculty/k-madhava-krishna/">K Madhava Krishna</a>
+              <a href="https://siddharthsrivastava.github.io/" target="_blank" rel="noopener noreferrer">Siddharth
+                Srivastava</a>,
+              <a href="https://web.iitd.ac.in/~chetan/" target="_blank" rel="noopener noreferrer">Chetan Arora</a>,
+              <a href="https://www.iiit.ac.in/faculty/k-madhava-krishna/" target="_blank" rel="noopener noreferrer">K
+                Madhava Krishna</a>
             </div>
-            <div class="paper-venue">Advances in Robotics 2025</div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/abs/2409.12002">paper</a>
+            <div class="paper-venue-badge">
+              <strong>Advances in Robotics 2025</strong>
             </div>
-            <p class="paper-description">
+            <div class="paper-links-group">
+              <a href="https://arxiv.org/abs/2409.12002" target="_blank" rel="noopener noreferrer"><i class="ai ai-arxiv"></i> arXiv</a>
+            </div>
+            <p class="paper-summary">
               A multi-modal (visual + depth) re-identification improves SLAM performance by effectively leveraging
               visual cues.
             </p>
           </div>
-        </div>
+        </article>
+
       </div>
     </section>
-  </div>
+
+
+    <!-- ==========================================
+         TAB 3: BLOGS
+         ========================================== -->
+    <section id="panel-blogs" class="tab-panel" role="tabpanel">
+      <div class="placeholder-container">
+        <div class="placeholder-icon">
+          <i class="fas fa-pen-nib"></i>
+        </div>
+        <h2 class="placeholder-title">Blogs</h2>
+        <p class="placeholder-text">Coming soon.</p>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         TAB 4: OTHER STUFF
+         ========================================== -->
+    <section id="panel-other-stuff" class="tab-panel" role="tabpanel">
+      <div class="placeholder-container">
+        <div class="placeholder-icon">
+          <i class="fas fa-compact-disc"></i>
+        </div>
+        <h2 class="placeholder-title">Other Stuff</h2>
+        <p class="placeholder-text">Coming soon.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; Vaibhav Agrawal &bull; Updated 2026</p>
+  </footer>
+
+  <!-- ==========================================
+       Interactive JavaScript: Tabs, Theme, and GIF Player
+       ========================================== -->
   <script>
-    document.querySelectorAll('.paper-card').forEach(card => {
-      const staticImg = card.querySelector('.static-thumb');
-      const gifImg = card.querySelector('.gif-thumb');
-      const lastImg = card.querySelector('.last-thumb');
-      const duration = parseInt(card.getAttribute('data-gif-duration'));
+    (function () {
+      'use strict';
 
-      if (!gifImg) return;
+      /* ------------------------------------------------------------------------
+         1. Theme Management (Dark / Light)
+         ------------------------------------------------------------------------ */
+      const themeToggleBtn = document.getElementById('themeToggle');
+      const htmlEl = document.documentElement;
 
-      let timer;
-      let clearSrcTimer;
-      // Strip any existing query string to get the clean base path
-      const originalGifSrc = gifImg.src.split('?')[0];
+      function setTheme(theme) {
+        htmlEl.setAttribute('data-theme', theme);
+        localStorage.setItem('site-theme', theme);
+        const icon = themeToggleBtn.querySelector('i');
+        const lightSpan = themeToggleBtn.querySelector('.mode-light');
+        const darkSpan = themeToggleBtn.querySelector('.mode-dark');
 
-      card.addEventListener('mouseenter', () => {
-        // Stop any pending timers
-        clearTimeout(timer);
-        clearTimeout(clearSrcTimer);
+        if (theme === 'dark') {
+          if (icon) icon.className = 'fas fa-moon';
+          if (lightSpan) lightSpan.className = 'mode-light mode-inactive';
+          if (darkSpan) darkSpan.className = 'mode-dark mode-active';
+          themeToggleBtn.setAttribute('title', 'Switch to light theme');
+        } else {
+          if (icon) icon.className = 'fas fa-sun';
+          if (lightSpan) lightSpan.className = 'mode-light mode-active';
+          if (darkSpan) darkSpan.className = 'mode-dark mode-inactive';
+          themeToggleBtn.setAttribute('title', 'Switch to dark theme');
+        }
+      }
 
-        // Cache-bust: append a unique query param so the browser truly
-        // re-fetches / re-decodes the GIF from frame 0 every time.
-        gifImg.src = originalGifSrc + '?t=' + Date.now();
+      // Initialize theme from storage or default to light
+      const savedTheme = localStorage.getItem('site-theme') || 'light';
+      setTheme(savedTheme);
 
-        // Display GIF, hide last frame
-        gifImg.style.opacity = '1';
-        if (lastImg) {
-          lastImg.style.opacity = '0';
-          // Re-enable transition for last-thumb (may have been disabled)
-          lastImg.style.transition = '';
+      themeToggleBtn.addEventListener('click', function () {
+        const currentTheme = htmlEl.getAttribute('data-theme') || 'light';
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      });
+
+
+      /* ------------------------------------------------------------------------
+         2. Tab Navigation with Hash Routing
+         ------------------------------------------------------------------------ */
+      const tabButtons = document.querySelectorAll('.tab-btn[data-tab]');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+      const validTabs = ['home', 'publications', 'blogs', 'other-stuff'];
+
+      function switchTab(tabId) {
+        if (!validTabs.includes(tabId)) {
+          tabId = 'home';
         }
 
-        if (duration) {
-          // We fade in the last frame slightly early (e.g., 150ms before the GIF ends)
-          const earlyFadeOffset = 500;
-          const fadeStartDelay = Math.max(0, duration - earlyFadeOffset);
+        // Update active tab button in navigation
+        tabButtons.forEach(btn => {
+          if (btn.getAttribute('data-tab') === tabId) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+          } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          }
+        });
 
-          timer = setTimeout(() => {
-            if (lastImg) {
-              // Smoothly fade in the last frame over 150ms
-              lastImg.style.transition = 'opacity 0.15s ease-in-out';
-              lastImg.style.opacity = '1';
-            }
-            // Once the last image is fully opaque (at the actual duration mark),
-            // fade out the GIF underneath and clean up.
-            timer = setTimeout(() => {
+        // Show corresponding panel
+        tabPanels.forEach(panel => {
+          if (panel.id === 'panel-' + tabId) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+      }
+
+      function handleHashChange() {
+        const hash = window.location.hash.replace('#', '').toLowerCase();
+        switchTab(hash || 'home');
+      }
+
+      window.addEventListener('hashchange', handleHashChange);
+      handleHashChange(); // Run on initial load
+
+
+      /* ------------------------------------------------------------------------
+         3. Robust GIF Hover Animation Controller
+         ------------------------------------------------------------------------ */
+      const paperCards = document.querySelectorAll('.paper-card');
+
+      paperCards.forEach(card => {
+        const mediaBox = card.querySelector('.paper-media-box[data-duration]');
+        if (!mediaBox) return;
+
+        const gifImg = mediaBox.querySelector('.gif-thumb');
+        const lastImg = mediaBox.querySelector('.last-thumb');
+        const rawGifSrc = mediaBox.getAttribute('data-gif-src');
+        const duration = parseInt(mediaBox.getAttribute('data-duration'), 10);
+
+        if (!gifImg || !rawGifSrc || isNaN(duration)) return;
+
+        // Preload the GIF in browser memory so first hover starts instantaneously
+        const preload = new Image();
+        preload.src = rawGifSrc;
+
+        let playbackTimer = null;
+        let isHovered = false;
+        let playSessionId = 0;
+
+        card.addEventListener('mouseenter', function () {
+          isHovered = true;
+          playSessionId++;
+          const currentSession = playSessionId;
+
+          if (playbackTimer) {
+            clearTimeout(playbackTimer);
+          }
+
+          // Reset final frame visibility
+          if (lastImg) {
+            lastImg.style.opacity = '0';
+          }
+
+          // Force GIF to play from frame 0 using unique timestamp
+          gifImg.src = rawGifSrc + '?play=' + Date.now();
+          gifImg.style.opacity = '1';
+
+          // When GIF reaches its final frame duration:
+          playbackTimer = setTimeout(function () {
+            if (isHovered && playSessionId === currentSession) {
+              if (lastImg) {
+                lastImg.style.opacity = '1';
+              }
               gifImg.style.opacity = '0';
-              clearSrcTimer = setTimeout(() => { gifImg.src = ''; }, 300);
-            }, earlyFadeOffset);
-          }, fadeStartDelay);
-        }
+              gifImg.removeAttribute('src'); // Stop background playback
+            }
+          }, duration);
+        });
+
+        card.addEventListener('mouseleave', function () {
+          isHovered = false;
+          playSessionId++;
+
+          if (playbackTimer) {
+            clearTimeout(playbackTimer);
+          }
+
+          // Immediately hide animated GIF and final frame
+          gifImg.style.opacity = '0';
+          gifImg.removeAttribute('src');
+
+          if (lastImg) {
+            lastImg.style.opacity = '0';
+          }
+
+          // Static start frame remains visible underneath at z-index 1
+        });
       });
 
-      card.addEventListener('mouseleave', () => {
-        // Cancel any pending timers
-        clearTimeout(timer);
-        clearTimeout(clearSrcTimer);
-
-        // Hide GIF and last frame; static-thumb (first frame) shows underneath.
-        gifImg.style.opacity = '0';
-        if (lastImg) {
-          lastImg.style.transition = '';
-          lastImg.style.opacity = '0';
-        }
-        // Clear src after fade-out transition finishes.
-        clearSrcTimer = setTimeout(() => { gifImg.src = ''; }, 300);
-      });
-    });
+    })();
   </script>
 </body>
 
